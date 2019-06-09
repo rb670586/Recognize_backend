@@ -24,8 +24,7 @@ const app = express();
 app.use(cors())
 app.use(bodyParser.json());
 
-app.get('/', (req, res)=> {res.send(database.users);
-})
+app.get('/', (req, res)=> { res.send('it is working!') })
 
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt)})
 app.post('/register', (req, res) => {register.handleRegister(req, res, db, bcrypt)}) //dependency injection
